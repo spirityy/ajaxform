@@ -8,6 +8,10 @@
 
   $.fn.ajaxSubmit = function(options,callback) {
 
+
+    var formurl = $(this).attr('action');
+    if(!formurl) return;
+
     var opts = {};
 
     if (typeof options == 'function') {
@@ -15,9 +19,9 @@
     }
 
     var initopts = {
-      url:$(this).attr('action'),
+      url:formurl,
       method:$(this).attr('method')||'post',
-      data:$(this).serialize()||'',
+      data:$(this).serialize(),
       success:callback
     };
 
