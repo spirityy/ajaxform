@@ -1,0 +1,19 @@
+{
+  "name": "ajaxform",
+  "version": "1.0.0",
+  "description": "simple ajax submit form plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spirityy/ajaxform.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spirityy/ajaxform/issues"
+  },
+  "homepage": "https://github.com/spirityy/ajaxform"
+}
