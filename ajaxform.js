@@ -11,7 +11,7 @@
     var opts = {};
 
     if (typeof options == 'function') {
-        opts.success=options;
+        options.success=options;
     }
 
     var initopts = {
