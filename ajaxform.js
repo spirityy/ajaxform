@@ -8,6 +8,8 @@
 
   $.fn.ajaxSubmit = function(options,callback) {
 
+    var submitTrigger = $(this).find(':submit');
+    if(submitTrigger) submitTrigger.attr('disabled','disabled');
 
     var formurl = $(this).attr('action');
     if(!formurl) return;
@@ -32,9 +34,9 @@
 
     opts = $.extend(initopts,options);
 
-    $.ajax(opts);
-
+    $.ajax(opts).done(function(){
+      if(submitTrigger) submitTrigger.removeAttr('disabled');
+    });
   };
 
 })(jQuery);
-
